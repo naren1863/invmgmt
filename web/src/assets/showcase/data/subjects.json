@@ -1,0 +1,16 @@
+{
+    "data": [
+        {"subjectId": "SUB001", "subjectName": "Physics", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB002", "subjectName": "Chemistry", "subjectDescription": "Chemistry", "deleted": false},
+		{"subjectId": "SUB003", "subjectName": "Maths", "subjectDescription": "Maths", "deleted": false},
+		{"subjectId": "SUB004", "subjectName": "Biology", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB005", "subjectName": "Statistics", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB006", "subjectName": "Computer Science", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB007", "subjectName": "Kannada", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB008", "subjectName": "Hindi", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB009", "subjectName": "English", "subjectDescription": "Physics", "deleted": false},
+		{"subjectId": "SUB010", "subjectName": "Sanskrit", "subjectDescription": "Physics", "deleted": false}
+		
+		
+    ]
+}

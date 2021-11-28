@@ -1,0 +1,68 @@
+Subject Page
+	add cancel button to detail page. done.
+	confirmation message while deleting. Done.
+	delete button should just disable row. 
+	duplicate entry? 
+
+Teacher
+	add cancel button to detail page. Done.
+	update the header in details page. Done.
+	disable fields while updating. Done.
+	confirmation message while deleting. Done.
+	add * for required fields. validation of fields. Done. handeled in different way.
+	message after saving data. Done.
+	add date restriction to DOB. Done.
+	fix date bug.
+	any other validations? 
+		duplicate entry? 
+
+
+
+
+Students Page:
+	Sorting Based on Names
+	Have dropdown for classes in the header with apply button.  Ex. SCI-PUCI-A, COM-PUCI-A. Should be filterable with classes.
+	Implement create Logic. Write underlying logic to create the respective json
+	Edit option to edit contact info for now. Write underlying logic to update the respective json.
+	Add more columns and change class column as displayable. Ex. SCI-PUCI-A. 
+	Later: 
+		Implement Import Logic.
+
+
+
+Person
+	Personal
+		first Name
+		last Name
+		Gender
+		DOB
+		Photo - Not Done
+	Qualification
+		Secondary Education{Board, Year Passed, %}
+		Pre-University {Board, Year Passed, %}
+		Graduation {Board, Year Passed, %}
+		Masters {Board, Year Passed, %}
+		Occupation{
+			Student
+			Salaried
+			Business Man
+			Service Man
+		}
+	Contact
+		Address
+		City
+		State
+		Pincode
+		Landline
+		Mobile
+		Email
+	Medical
+		BloodGroup
+		Height
+		Weight
+
+Best practices for table created.
+	make sure of column types.
+	see if create/update logging is required.
+	see if triggers are necessary.
+	

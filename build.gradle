@@ -1,0 +1,86 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+        maven {url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/'}
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
+	}
+}
+
+plugins {
+	id "com.moowork.node" version "0.12"
+  }
+  
+  
+  node {
+	  version = '16.13.0'
+	  npmVersion = '8.1.4'
+	  download = true
+	  workDir = file("${rootProject.projectDir}/web/nodejs")
+  }
+  
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.naren'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('mysql:mysql-connector-java')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+	compile('org.projectlombok:lombok:1.16.16')
+
+
+
+}
+
+task installWebDependency(type: NpmTask) {
+	
+		this.project.afterEvaluate {
+			getInputs().file(file("${rootProject.projectDir}/web/package.json"))
+			getOutputs().dir(file("${rootProject.projectDir}/web/node_modules"))
+			setWorkingDir(file("${rootProject.projectDir}/web"))
+		}
+	
+		args = ['install']
+	}
+	task buildWeb(type: NpmTask, dependsOn: 'installWebDependency') {
+	
+		this.project.afterEvaluate {
+			getInputs().file(file("${rootProject.projectDir}/web"))
+			getOutputs().dir(file("${rootProject.projectDir}/web/node_modules"))
+			setWorkingDir(file("${rootProject.projectDir}/web"))
+		}
+	
+		args = ['run', 'build']
+	}
+	
+	task copyWeb(type: Copy) {
+		from 'web/dist/'
+		into 'build/resources/main/static'
+	}
+	
+	processResources.dependsOn copyWeb
+	copyWeb.dependsOn buildWeb
+
+
