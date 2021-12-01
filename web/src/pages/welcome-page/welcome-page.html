@@ -1,25 +1,24 @@
-<p-blockUI [target]="studstep1" [blocked]="display">
+
   <div style="position:absolute;top:25%;left:50%">
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br>
   </div>
-</p-blockUI>
 
 <div class="home-div">
 <div></div>
 <div>
-    <p-panel>
+
       <div class="login-box">
           <span><i class="fa fa-user"></i></span>
-          <input type="text" pInputText placeholder="Username" id="username" [(ngModel)]="loginUser.username">
+          <input type="text" pInputText placeholder="Username" id="username" [()]="loginUser.username">
       </div>
       <div class="login-box">
           <span><i class="fa fa-user"></i></span>
-          <input type="password" pInputText placeholder="Password" id="password" [(ngModel)]="loginUser.password">
+          <input type="password" pInputText placeholder="Password" id="password" [()]="loginUser.password">
       </div>
       <div align="right">
           <button pButton type="button" icon="fa-login" (click)="onLogin()" label="Login" class="ui-button-info"></button>
       </div>
-    </p-panel>
+
 </div>
 <div></div>
 </div>

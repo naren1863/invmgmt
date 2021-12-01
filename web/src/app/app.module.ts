@@ -7,69 +7,51 @@ import {Validators,FormControl,FormGroup,
         FormBuilder, ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import {
-  AccordionModule,
-  AutoCompleteModule,
-  BlockUIModule,
-  ButtonModule,
-  ChipsModule,
-  DropdownModule,
-  InputTextModule,
-  PanelModule,
-  SelectButtonModule,
-  MenubarModule, MenuModule, OverlayPanelModule,
-  CheckboxModule, SpinnerModule,
-  GrowlModule, ListboxModule,
-  DialogModule, RadioButtonModule,
-  CalendarModule,  
-  ConfirmDialogModule, DataTableModule,
-  InplaceModule, MessagesModule,DataListModule, 
-  FieldsetModule, MegaMenuModule, PanelMenuModule, 
-  ProgressSpinnerModule, SidebarModule, MessageModule,
-
-  ConfirmationService,
-} from 'primeng/primeng';
-
-
+import { AccordionModule } from 'primeng/accordion';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { BlockUIModule } from 'primeng/blockui';
+import { ButtonModule } from 'primeng/button';
+import { ChipsModule } from 'primeng/chips';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { PanelModule } from 'primeng/panel';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { MenubarModule } from 'primeng/menubar';
+import { MenuModule } from 'primeng/menu';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { CheckboxModule } from 'primeng/checkbox';
+import { SpinnerModule } from 'primeng/spinner';
+import { ListboxModule } from 'primeng/listbox';
+import { DialogModule } from 'primeng/dialog';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CalendarModule } from 'primeng/calendar';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { TableModule } from 'primeng/table';
+import { InplaceModule } from 'primeng/inplace';
+import { MessagesModule } from 'primeng/messages';
+import { OrderListModule } from 'primeng/orderlist';
+import { FieldsetModule } from 'primeng/fieldset';
+import { MegaMenuModule } from 'primeng/megamenu';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { SidebarModule } from 'primeng/sidebar';
+import { MessageModule } from 'primeng/message';
 
 //import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
 import {studCreateComponent} from '../pages/main-page/main-page';
-import {studDetailComponent} from '../pages/student/student';
-import {WelcomestudComponent} from '../pages/welcome-page/welcome-page';
-import { ClassesComponent } from '../pages/classes/classes';
-import { SubjectsComponent } from '../pages/subjects/subjects';
-import { StudentsComponent } from '../pages/students/students';
-import { StaffsComponent } from '../pages/staffs/staffs';
-import { SubstaffmappingComponent } from '../pages/substaffmapping/substaffmapping';
-import { AttendanceComponent } from '../pages/attendance/attendances';
 
-import { ClassService } from '../pages/classes/classservice';
-import { SubjectService } from '../pages/subjects/subjectservice';
-import { StudentService } from '../pages/students/studentservice';
-import { StaffService } from '../pages/staffs/staffservice';
-import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
 import { LoginService } from '../providers/login-service';
-import { AttendanceService} from '../pages/attendance/attendanceservice';
-
+import { ItemsComponent } from '../pages/items/items.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     studCreateComponent,
-    studDetailComponent,
-    WelcomestudComponent,
-    ClassesComponent,
-    SubjectsComponent,
-    StudentsComponent,
-    StaffsComponent,
-    SubstaffmappingComponent,
-    AttendanceComponent
+    ItemsComponent
     
   ],
-
-
 
   imports: [
     BrowserModule,
@@ -90,16 +72,16 @@ import { AttendanceService} from '../pages/attendance/attendanceservice';
     MenubarModule, MenuModule,
     OverlayPanelModule,
     CheckboxModule, SpinnerModule,
-    GrowlModule, ListboxModule,
+    ListboxModule,
     DialogModule, RadioButtonModule,
-    CalendarModule,ConfirmDialogModule, DataTableModule,
-    InplaceModule, MessagesModule,DataListModule, 
+    CalendarModule,ConfirmDialogModule, TableModule,
+    InplaceModule, MessagesModule,OrderListModule, 
     FieldsetModule, MegaMenuModule, SidebarModule,
     PanelMenuModule, HttpClientModule, ReactiveFormsModule
   ],
-  providers: [ClassService,  SubjectService, HttpClient, StudentService, 
-              StaffService, SubstaffmappingService, LoginService, AttendanceService,
-              ConfirmationService],
+  providers: [HttpClient,
+               LoginService
+              ],
 
   bootstrap: [AppComponent]
 })
