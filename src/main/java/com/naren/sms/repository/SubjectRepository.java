@@ -1,6 +1,6 @@
-package com.naren.invmgmt.repository;
+package com.naren.sms.repository;
 
-import com.naren.invmgmt.entity.SubjectEntity;
+import com.naren.sms.entity.SubjectEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

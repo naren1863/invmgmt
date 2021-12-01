@@ -1,4 +1,4 @@
-package com.naren.invmgmt.request;
+package com.naren.sms.request;
 
 import java.sql.Timestamp;
 

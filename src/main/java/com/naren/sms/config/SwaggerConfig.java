@@ -1,4 +1,4 @@
-package com.naren.invmgmt.config;
+package com.naren.sms.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

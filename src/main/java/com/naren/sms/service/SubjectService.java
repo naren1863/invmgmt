@@ -1,9 +1,9 @@
-package com.naren.invmgmt.service;
+package com.naren.sms.service;
 
-import com.naren.invmgmt.entity.SubjectEntity;
-import com.naren.invmgmt.repository.SubjectRepository;
-import com.naren.invmgmt.request.Subject;
-import com.naren.invmgmt.util.SubjectUtil;
+import com.naren.sms.entity.SubjectEntity;
+import com.naren.sms.repository.SubjectRepository;
+import com.naren.sms.request.Subject;
+import com.naren.sms.util.SubjectUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

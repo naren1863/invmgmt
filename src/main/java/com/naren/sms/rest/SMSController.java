@@ -1,7 +1,7 @@
-package com.naren.invmgmt.rest;
+package com.naren.sms.rest;
 
-import com.naren.invmgmt.request.Subject;
-import com.naren.invmgmt.service.SubjectService;
+import com.naren.sms.request.Subject;
+import com.naren.sms.service.SubjectService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,8 +24,8 @@ public class SMSController
     @Autowired
     SubjectService subjectService;
 
-    @Value("${naren.invmgmt.uri}")
-    String invmgmtUrl;
+    @Value("${naren.sms.uri}")
+    String smsUrl;
 
     @RequestMapping(value = "/saveSubject", method = RequestMethod.POST, produces = {
             MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })

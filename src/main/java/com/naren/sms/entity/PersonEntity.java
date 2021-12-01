@@ -1,4 +1,4 @@
-package com.naren.invmgmt.entity;
+package com.naren.sms.entity;
 
 import lombok.Data;
 import lombok.ToString;

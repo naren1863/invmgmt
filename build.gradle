@@ -18,8 +18,8 @@ plugins {
   
   
   node {
-	  version = '16.13.0'
-	  npmVersion = '8.1.4'
+	  version = '6.9.0'
+	  npmVersion = '3.10.8'
 	  download = true
 	  workDir = file("${rootProject.projectDir}/web/nodejs")
   }

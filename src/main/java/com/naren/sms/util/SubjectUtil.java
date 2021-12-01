@@ -1,7 +1,7 @@
-package com.naren.invmgmt.util;
+package com.naren.sms.util;
 
-import com.naren.invmgmt.entity.SubjectEntity;
-import com.naren.invmgmt.request.Subject;
+import com.naren.sms.entity.SubjectEntity;
+import com.naren.sms.request.Subject;
 import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
