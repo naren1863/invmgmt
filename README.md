@@ -1,2 +1,2 @@
-# scmgmt
-School Management System
+# Inventory Management 
+Inventory Management System
