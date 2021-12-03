@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem} from 'primeng/primeng';
+import { MenuItem} from 'primeng/api';
 import { LoginService } from '../providers/login-service';
 import { Route, Router } from '@angular/router';
 @Component({
@@ -8,15 +8,17 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    constructor(private loginSerice: LoginService, private router: Router)
+    constructor(public loginService: LoginService, private router: Router)
      {
         const name = 'Omega'.toLowerCase();
         document.getElementById('theme-css').setAttribute('href', 'assets/themes/' + name + '/theme.css');
-        if (!loginSerice.isLoggedIn()){
-          this.router.navigate(['/']);
-      }
+//         if (!loginSerice.isLoggedIn()){
+//           this.router.navigate(['/']);
+//         }
     }
   
 }
+
+
 
 

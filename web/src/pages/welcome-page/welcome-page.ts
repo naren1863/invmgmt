@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Message } from 'primeng/primeng';
-import { SelectItem } from 'primeng/primeng';
+import { Message } from 'primeng/api';
+import { SelectItem } from 'primeng/api';
 import { Router } from '@angular/router';
 import { LoginService } from '../../providers/login-service';
 import {User} from '../welcome-page/user';

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {User} from '../pages/welcome-page/user';
-import { Globals } from 'app/global';
+//import { Globals } from 'app/global';
 
 @Injectable()
 export class LoginService {
@@ -30,7 +30,7 @@ export class LoginService {
         } else {
             this.setLogin(false);
         }
-        Globals.setLoggedInUser(user.username);
+        //Globals.setLoggedInUser(user.username);
         
     }
 

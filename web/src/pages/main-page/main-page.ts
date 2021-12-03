@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Message } from 'primeng/primeng';
-import { SelectItem } from 'primeng/primeng';
-import { MenuItem } from 'primeng/primeng';
-import { SidebarModule } from 'primeng/primeng';
+import { MenuItem, Message, SelectItem } from 'primeng/api';
+import { SidebarModule } from 'primeng/sidebar';
 
 import { BasePage } from '../base-page/base-page';
 @Component({
