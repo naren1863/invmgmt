@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 /*group*/
+@import "../node_modules/primeicons/primeicons.css";
+@import "assets/showcase/styles/flags.css";
+@import "assets/showcase/styles/app/app.scss";
+
 @import 'assets/showcase/css/site.css';
 @import 'assets/showcase/css/global.css';
+
+
 p-menubar .menu-bar, .multi-panel1 div.ui-panel-content,.vertical-panel1 div.ui-panel-content,
 .vertical-panel2 div.ui-panel-content,.wrapper2 div.ui-panel-content {
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0

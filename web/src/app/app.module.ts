@@ -33,34 +33,38 @@ import { OrderListModule } from 'primeng/orderlist';
 import { FieldsetModule } from 'primeng/fieldset';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ToastModule } from 'primeng/toast';
 import { SidebarModule } from 'primeng/sidebar';
 import { MessageModule } from 'primeng/message';
 
 //import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
 import {studCreateComponent} from '../pages/main-page/main-page';
+import { ItemsComponent } from '../pages/items/items.component';
+import { VendorsComponent } from '../pages/vendors/vendors.component';
 
 import { LoginService } from '../providers/login-service';
-import { ItemsComponent } from '../pages/items/items.component';
-
+import { ItemService } from '../pages/items/itemservice';
 
 @NgModule({
   declarations: [
     AppComponent,
     studCreateComponent,
-    ItemsComponent
+    ItemsComponent,
+    VendorsComponent
     
   ],
 
   imports: [
-    BrowserModule,
+    BrowserModule,ToolbarModule,
+    ButtonModule,
     appRouting,
     HttpModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
     FormsModule,
     // primeng
-    AccordionModule,
+    AccordionModule,ToastModule,
     AutoCompleteModule,
     BlockUIModule,
     ButtonModule,
@@ -80,7 +84,7 @@ import { ItemsComponent } from '../pages/items/items.component';
     PanelMenuModule, HttpClientModule, ReactiveFormsModule
   ],
   providers: [HttpClient,
-               LoginService
+               LoginService, ItemService
               ],
 
   bootstrap: [AppComponent]

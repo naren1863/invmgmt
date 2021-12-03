@@ -11,7 +11,7 @@ export class AppComponent {
     constructor(public loginService: LoginService, private router: Router)
      {
         const name = 'Omega'.toLowerCase();
-        document.getElementById('theme-css').setAttribute('href', 'assets/themes/' + name + '/theme.css');
+        //document.getElementById('theme-css').setAttribute('href', 'assets/themes/' + name + '/theme.css');
 //         if (!loginSerice.isLoggedIn()){
 //           this.router.navigate(['/']);
 //         }
